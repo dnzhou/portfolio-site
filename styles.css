@@ -9,11 +9,18 @@ body {
     justify-content: center;
     color: white;
 }
+.container {
+    padding: 1rem;
+    margin: 1rem;
+    background-color: rgba(180, 180, 180, 0.2);
+    backdrop-filter: 15px;
 
+
+}
 .background {
     background-position: center; 
 
-    filter: blur(10px);
+    filter: blur(20px);
 
     position: absolute;
     width: 100%; /* Make it cover the container */
@@ -21,26 +28,29 @@ body {
     object-fit: cover;
     z-index: -1;
 }
-.header,
-.footer{
-    display: grid;
-    justify-content: flex-end;
+.header > .nav,
+.footer > .nav{
+    display: flex;
     background-color: rgba(0, 0, 0, 0.4);
+    font-size: 1.25rem;
     
-    
+}
+.nav {
+    padding: 0;
 }
 .nav > li:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
-ul {
-    list-style-type: none;
-    margin: 0;
-    
+.nav > li {
     
     padding: 16px;
-    gap: 16px;
+}
+ul {
+    list-style-type: none;
+
     
 }
+
 
 a {
     color: white;
@@ -48,7 +58,7 @@ a {
 }
 .icon {
     position: relative;
-    top: 2px;
+    top: 3px;
     margin-right: 5px;
     height: 1em;
     filter: invert(100%);
