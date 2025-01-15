@@ -1,6 +1,14 @@
+:root {
+    --clr-light: rgba(180, 180, 180, 0.2);
+    --clr-dark: rgba(0, 0, 0, 0.4);
+}
+* {
+    margin: 0;
+}
+
 body {
     font-family: Roboto, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    min-height: 100vh;
+    height: 100vh;
     background-color: rgb(0, 0, 0);
     margin: 0;
     display: flex;
@@ -12,9 +20,9 @@ body {
 .container {
     padding: 1rem;
     margin: 1rem;
-    background-color: rgba(180, 180, 180, 0.2);
+    background-color: var(--clr-light);
     backdrop-filter: 15px;
-
+    
 
 }
 .background {
@@ -28,29 +36,46 @@ body {
     object-fit: cover;
     z-index: -1;
 }
-.header > .nav,
-.footer > .nav{
+.header,
+.footer {
+    position: fixed; 
+    width: 100vw;
+
+}
+.header {
+    top: 0;
+}
+.footer {
+    bottom: 0;
+}
+
+.header > .nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
     display: flex;
     background-color: rgba(0, 0, 0, 0.4);
-    font-size: 1.25rem;
-    
-}
-.nav {
+    font-size: 1.5rem;
+    justify-content: end;
     padding: 0;
 }
-.nav > li:hover {
+.left,
+.right {
+    display: flex;
+    
+}
+
+.nav a:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
-.nav > li {
-    
+.nav a {
     padding: 16px;
 }
 ul {
     list-style-type: none;
-
-    
 }
-
 
 a {
     color: white;
@@ -62,4 +87,8 @@ a {
     margin-right: 5px;
     height: 1em;
     filter: invert(100%);
+}
+
+button {
+
 }
