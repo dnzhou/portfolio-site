@@ -18,17 +18,18 @@ body {
     color: white;
 }
 .container {
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
     margin: 1rem;
-    background-color: var(--clr-light);
+    gap: 30px;
     backdrop-filter: 15px;
     
-
 }
 .background {
     background-position: center; 
 
-    filter: blur(20px);
+    filter: blur(25px);
 
     position: absolute;
     width: 100%; /* Make it cover the container */
@@ -64,7 +65,8 @@ body {
 .left,
 .right {
     display: flex;
-    
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .nav a:hover {
@@ -89,6 +91,15 @@ a {
     filter: invert(100%);
 }
 
-button {
-
+.contact-button {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border-color: white;
+    width: 200px;
+    background-color: var(--clr-light);
+    color: white;
+    align-self: center;
 }
+
